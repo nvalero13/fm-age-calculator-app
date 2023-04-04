@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import "../index.css";
 
+import icon from "../assets/images/icon-arrow.svg";
+
 const Button = styled.button`
   width: 96px;
   height: 96px;
@@ -28,7 +30,7 @@ const Button = styled.button`
 function StyledButton({ handleClick }) {
   return (
     <Button onClick={handleClick}>
-      <img style={{ width: "50%" }} src="src/assets/images/icon-arrow.svg" />
+      <img style={{ width: "50%" }} src={icon} />
     </Button>
   );
 }
