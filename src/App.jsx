@@ -1,15 +1,16 @@
-import styled from "styled-components";
-import "./index.css";
-
-const Container = styled.div`
-  width: 840px;
-  height: 650px;
-  background-color: var(--white);
-  border-radius: 24px 24px 200px 24px;
-`;
+import { Container } from "./components/Container";
+import StyledInput from "./components/StyledInput";
 
 function App() {
-  return <Container className="App"></Container>;
+  return (
+    <Container>
+      <div style={{ display: "flex", gap: "32px" }}>
+        <StyledInput title="Day" placeholder="DD" />
+        <StyledInput title="Month" placeholder="MM" />
+        <StyledInput title="Year" placeholder="YYYY" />
+      </div>
+    </Container>
+  );
 }
 
 export default App;
