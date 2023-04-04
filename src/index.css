@@ -15,9 +15,8 @@
 
 body {
   margin: 0;
-  background-color: antiquewhite;
   display: grid;
   height: 100vh;
   place-items: center;
-  background-color: var(--light-grey);
+  background-color: var(--off-white);
 }
