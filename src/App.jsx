@@ -8,6 +8,20 @@ import Text from "./components/Text";
 import useError from "./assets/hooks/useError";
 import { substractDate } from "./assets/utils/substractDate";
 
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+  margin-top: 36px;
+  margin-bottom: 36px;
+  border-top: 1px solid var(--off-white);
+  position: relative;
+
+  @media (max-width: 764px) {
+    margin-top: 56px;
+    margin-bottom: 56px;
+  }
+`;
+
 function App() {
   const [resultDate, setResultDate] = useState({
     years: "--",
@@ -38,7 +52,7 @@ function App() {
 
   return (
     <Container>
-      <div style={{ display: "flex", gap: "32px" }}>
+      <div style={{ display: "flex" }}>
         <StyledInput
           title="Day"
           placeholder="DD"
@@ -59,16 +73,9 @@ function App() {
         />
       </div>
 
-      <div
-        style={{
-          marginTop: "36px",
-          marginBottom: "36px",
-          borderTop: "1px solid var(--off-white)",
-          position: " relative",
-        }}
-      >
+      <StyledDiv>
         <StyledButton handleClick={handleClick} />
-      </div>
+      </StyledDiv>
 
       <Text num={resultDate.years} text="years" />
       <Text num={resultDate.months} text="months" />

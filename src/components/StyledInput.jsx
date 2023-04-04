@@ -9,6 +9,10 @@ const StyledLabel = styled.label`
 
   color: ${(props) =>
     props.error ? "var(--light-red)" : "var(--smokey-grey)"};
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 const StyledInput = styled.input`
@@ -20,6 +24,7 @@ const StyledInput = styled.input`
   padding-left: 24px;
   box-sizing: border-box;
   font-size: 32px;
+  margin-right: 32px;
   font-family: "Poppins";
   color: black;
 
@@ -27,13 +32,27 @@ const StyledInput = styled.input`
     border: 1px solid var(--purple);
     outline: none;
   }
+
+  @media (max-width: 768px) {
+    padding-left: 14px;
+    margin-right: 15px;
+    margin-top: 6px;
+    width: 90px;
+    height: 56px;
+    font-size: 20px;
+  }
 `;
 
 const Error = styled.p`
   color: var(--light-red);
   font-size: 12px;
   font-style: italic;
-  line-height: 0px;
+  line-height: 12px;
+  position: absolute;
+
+  @media (max-width: 768px) {
+    font-size: 8px;
+  }
 `;
 
 function Input(props) {

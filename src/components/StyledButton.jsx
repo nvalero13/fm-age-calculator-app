@@ -16,12 +16,19 @@ const Button = styled.button`
   &:hover {
     background-color: var(--off-black);
   }
+
+  @media (max-width: 768px) {
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 64px;
+    height: 64px;
+  }
 `;
 
 function StyledButton({ handleClick }) {
   return (
     <Button onClick={handleClick}>
-      <img src="src/assets/images/icon-arrow.svg" />
+      <img style={{ width: "50%" }} src="src/assets/images/icon-arrow.svg" />
     </Button>
   );
 }

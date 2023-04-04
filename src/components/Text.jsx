@@ -10,6 +10,11 @@ const StyledText = styled.h1`
   font-style: italic;
   margin: 0;
   line-height: 116px;
+
+  @media (max-width: 768px) {
+    font-size: 56px;
+    line-height: 62px;
+  }
 `;
 
 export default function Text(props) {
